@@ -1,0 +1,169 @@
+/* import font  */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* || General styles */
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+p{
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+:root{
+    /* primary */
+    --Bright-orange : hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%); 
+    --Very-dark-cyan :  hsl(179, 100%, 13%); 
+    /* Neutral */
+    --transparent-white :  hsla(0, 0%, 100%, 0.75);
+    --very-light-gray : hsl(0, 0%, 95%); 
+    --white : white; 
+}
+
+/* || Typography */
+
+h2{
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+/* || main */
+.main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh; 
+}
+
+/* || cards*/
+.cards{
+    display:inline-grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap:0;
+    width: 55%;
+    height: 100%;
+}
+
+/* || card sigle */
+.card-single{
+    padding: 40px 40px;
+    
+}
+
+.card-single img {
+    width: 50px;
+}
+
+.card-single h2 {
+    color: var(--very-light-gray);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+
+.card-single p {
+    color: var(--transparent-white);
+    line-height: 1.7rem;
+    font-size: 15px;
+}
+
+.card-p{
+    margin-bottom: 40px;
+}
+
+.card-single:first-child{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.card-single:last-child{
+     border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.sedans{
+    background-color: var(--Bright-orange);
+
+}
+.suvs{
+    background-color: var(--Dark-cyan);
+}
+
+.luxury{
+    background-color: var(--Very-dark-cyan);
+}
+.btn{
+    background: transparent;
+    color: var(--very-light-gray);
+    border: 2px solid var(--very-light-gray);
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
+    margin-top: 30%;
+}
+
+/* || Responsive tablet cards */
+@media screen and (max-width:1300px) and  (min-width: 800px){
+    .cards{
+       width: 90% ;
+       margin: 50px 0px;
+    }
+   
+}
+
+/* || Responsive mobile cards */
+@media screen and (max-width: 800px) and  (min-width: 200px) {
+    .cards{
+       display:grid; 
+       grid-template-columns: none;
+       min-width: 90%;
+       margin: 50px 0px;
+    }
+    .card-single{
+        padding: 40px 51px;
+    }
+    .card-single:first-child{
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .card-single:last-child{
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .btn.xs-bright-orange{
+        background: var(--very-light-gray);
+        color: var(--Bright-orange);
+    }
+    .btn.xs-dark-cyan{
+        background: var(--very-light-gray);
+        color: var(--Dark-cyan);
+    }
+    .btn.xs-very-dark-cyan{
+        background: var(--very-light-gray);
+        color: var(--Very-dark-cyan);
+    }
+    .btn{
+   
+        margin-top: 0;
+    }
+}
