@@ -118,6 +118,21 @@ h2{
     margin-top: 30%;
 }
 
+.btn.xs-bright-orange:hover{
+    background: var(--very-light-gray);
+    color: var(--Bright-orange);
+}
+
+.btn.xs-dark-cyan:hover{
+    background: var(--very-light-gray);
+    color: var(--Dark-cyan);
+}
+
+.btn.xs-very-dark-cyan:hover {
+    background: var(--very-light-gray);
+    color: var(--Very-dark-cyan);
+}
+
 /* || Responsive tablet cards */
 @media screen and (max-width:1300px) and  (min-width: 800px){
     .cards{
@@ -150,18 +165,7 @@ h2{
         border-bottom-left-radius: 8px;
     }
 
-    .btn.xs-bright-orange{
-        background: var(--very-light-gray);
-        color: var(--Bright-orange);
-    }
-    .btn.xs-dark-cyan{
-        background: var(--very-light-gray);
-        color: var(--Dark-cyan);
-    }
-    .btn.xs-very-dark-cyan{
-        background: var(--very-light-gray);
-        color: var(--Very-dark-cyan);
-    }
+    
     .btn{
    
         margin-top: 0;
